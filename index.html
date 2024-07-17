@@ -231,9 +231,18 @@
             var userEmail=document.getElementById("email").value;
             var userEmailCheck=/^[^\s@]+@[^\s@]+.[^\s@]+$/;
             var userPhone=document.getElementById("phone").value;
+            var userPhoneCheck=/^[0-9]+$/;
             console.log(userName)
             if(!userName.match(userNameCheck)){
                 alert("name field should not be empty")
+                return false
+            }
+            if(!userEmail.match(userEmailCheck)){
+                alert("email field should not be empty")
+                return false
+            }
+            if(!userPhone.match(userPhoneCheck)){
+                alert("phone field should not be empty")
                 return false
             }
             else{
